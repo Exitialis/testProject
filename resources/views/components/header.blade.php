@@ -19,12 +19,13 @@
                     @endif
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ route('registration') }}">Зарегистрироваться</a></li>
-                    <li><a href="{{ route('login') }}">Войти</a></li>
+                    @if(auth()->guest())
+                        <li><a href="{{ route('registration') }}">Зарегистрироваться</a></li>
+                        <li><a href="{{ route('login') }}">Войти</a></li>
+                    @else
+                        <li><a href="{{ route('logout') }}">Выйти</a></li>
+                    @endif
 
-                    {{--@if(auth()->check())--}}
-                        {{--<li><a href="{{ route('profile.logout') }}">Выход</a></li>--}}
-                    {{--@endif--}}
                 </ul>
             </div>
         </div>

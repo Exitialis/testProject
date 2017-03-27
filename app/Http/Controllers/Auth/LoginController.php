@@ -41,4 +41,16 @@ class LoginController extends Controller
 
         return response()->json(compact('redirect'));
     }
+
+    /**
+     * Выход с сайта.
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function logout()
+    {
+        \Auth::logout();
+
+        return redirect('/');
+    }
 }
