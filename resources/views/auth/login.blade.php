@@ -37,7 +37,7 @@
                                 <div class="col-sm-6 col-sm-offset-3">
                                     <button type="submit" class="btn btn-success btn-block" :disabled="loading">
                                         <i class="fa fa-spin fa-spinner"
-                                           v-if="loading"></i> {{ trans('Войти') }}
+                                           v-if="loading"></i> Войти
                                     </button>
                                 </div>
                             </div>

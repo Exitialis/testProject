@@ -37,7 +37,7 @@ class LoginController extends Controller
             return response()->json(flash('Неверный логин или пароль', 'error'));
         }
 
-        $redirect = route('profile');
+        $redirect = route('profile', auth()->id());
 
         return response()->json(compact('redirect'));
     }

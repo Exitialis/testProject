@@ -24,4 +24,6 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth', 'middleware' => 'guest'
 
 Route::group(['prefix' => 'profile', 'middleware' => 'auth', 'namespace' => 'Profile'], function ($router) {
     $router->get('/', 'ProfileController@index')->name('profile');
+    $router->get('{user_id}/getProfile', 'ProfileController@getProfile')->name('profile.get');
+    $router->put('{user_id}/setProfile', 'ProfileController@setProfile')->name('profile.update');
 });

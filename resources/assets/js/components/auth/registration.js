@@ -9,15 +9,14 @@ Vue.component('registration', {
                 password: null,
             },
             loading: false,
-            confirm: false,
         }
     },
 
     methods: {
         store(url) {
+            this.loading = true;
             window.axios.post(url, this.form).then(response => {
                 this.loading = false;
-                this.confirm = true;
                 this.errors = {};
             }).catch(error => {
                 this.loading = false;
