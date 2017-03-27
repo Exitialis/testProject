@@ -9,4 +9,5 @@ Homestead.yaml
 .env
 /public/js
 /punlic/css
-
+/public/fonts
+/public/mix-manifest.json

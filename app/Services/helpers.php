@@ -1,7 +1,6 @@
 <?php
 
 if ( ! function_exists('flash')) {
-
     /**
      * Сборка всплывающего сообщения.
      *
@@ -18,5 +17,4 @@ if ( ! function_exists('flash')) {
             ]
         ];
     }
-
 }

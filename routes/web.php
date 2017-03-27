@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return response()->redirect();
+    return redirect()->route('profile');
 });
 
 Route::group(['prefix' => 'auth', 'namespace' => 'Auth', 'middleware' => 'guest'], function($router) {
@@ -22,4 +22,6 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth', 'middleware' => 'guest'
     $router->post('registration', 'RegistrationController@create')->name('registration.post');
 });
 
-//Route::get('profile', '')
+Route::group(['prefix' => 'profile', 'middleware' => 'auth', 'namespace' => 'Profile'], function ($router) {
+    $router->get('/', 'ProfileController@index')->name('profile');
+});
