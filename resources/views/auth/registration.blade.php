@@ -6,7 +6,7 @@
             <div class="col-lg-6 col-lg-offset-3 col-xs-12">
                 <div class="panel panel-success">
                     <div class="panel-heading text-center">
-                        <h4>{{ trans('Регистрация') }}</h4>
+                        <h4>{{ 'Регистрация' }}</h4>
                     </div>
 
                     <div class="panel-body">
